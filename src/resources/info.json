@@ -1,0 +1,42 @@
+[
+    {
+    "id":1,
+    "title": "Generic Steel Chair",
+    "price": 689.00,
+    "category": "Tuna",
+    "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+    "image": "https://loremflickr.com/640/480?lock=350388196737024"
+    },
+    {
+    "id":2,
+    "title": "Elegant Metal Bike",
+    "price": 804.00,
+    "category": "Salad",
+    "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+    "image": "https://picsum.photos/seed/TWTpi3w/640/480"
+    },
+    {
+    "id":3,
+    "title": "Small Plastic Chicken",
+    "price": 253.00,
+    "category": "Hat",
+    "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+    "image": "https://picsum.photos/seed/Bo5g1Ffm/640/480"
+    },
+    {
+    "id":4,        
+    "title": "Intelligent Metal Salad",
+    "price": 96.00,
+    "category": "Table",
+    "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+    "image": "https://loremflickr.com/640/480?lock=8586406054068224"
+    },
+    {
+    "id":5,
+    "title": "Generic Steel Chips",
+    "price": 644.00,
+    "category": "Chicken",
+    "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+    "image": "https://loremflickr.com/640/480?lock=1190531564568576"
+    }
+]
