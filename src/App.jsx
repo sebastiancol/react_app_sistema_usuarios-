@@ -17,11 +17,11 @@ export const App = () => {
         <Route path='/app/products' element={<Products/>}></Route>
         <Route path='/app/products/?'></Route>
         <Route path='/app/categories/'></Route>
-        <Route path='/app/ticket/' element={<Ticket/>}></Route>
+        <Route path='/app/dashboard/ticket/' element={<Ticket/>}></Route>
         <Route path='/app/api/' element={<Card/>}></Route>
-        <Route path='/app/dashboard/' element={<DashBoard/>}></Route>
-        <Route path='/app/usercreate' element={<User/>}></Route>
-        <Route path='/app/useredit' element={<User/>}></Route>
+        <Route path='/app/dashboard/' element={<DashBoard/> }></Route>
+        <Route path='/app/dashboard/usercreate' element={<User/>}></Route>
+        <Route path='/app/dashboard/useredit' element={<User/>}></Route>
         <Route path="*" element={<h1>404 - Not Found</h1>} />
       </Routes>
     </>
