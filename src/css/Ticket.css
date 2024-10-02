@@ -1,7 +1,22 @@
-.container{
+.containera{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    border-style: dotted;
        
+}
+
+.item{
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.containerb{
+    display: grid;
+    align-self: auto;
+    align-items: center;
+    justify-self: auto;
+    justify-items: auto;
 }

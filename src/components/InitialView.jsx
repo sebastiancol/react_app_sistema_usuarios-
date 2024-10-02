@@ -1,24 +1,24 @@
 import {Link} from 'react-router-dom'
 import {} from 'bootstrap'
-//import { useState } from 'react'
+import { useState } from 'react'
 
 export const Main = () =>{
 
-    /*const login = (()=>{
+    const login = (()=>{
 
         const [islogin,setLogin] = useState(false);
         const [create, setCreate] = useState(false);
 
         if(!islogin){
 
-            return handleEvent({setLogin})
+            return setLogin(islogin)
         }else{
             setCreate(create)
         }
 
     })
 
-    login()*/
+    login()
    
     return(
         <div className="container">
@@ -31,18 +31,24 @@ export const Main = () =>{
                             <form action="" className='form-container'>
                                 <div className='form-group'>
                                     <label htmlFor="document" className="form-label">Usuario</label>
-                                    <input type="text" name="" id="" placeholder='usuario' />
+                                    <input type="text" name="user" id="user" placeholder='usuario' value={user} />
                                 </div>
                                 
                                 <br/>     
 
                                 <div className='form-group'>
                                     <label htmlFor="password" className="form-label">Password</label>
-                                    <input type="password" name="" id="" placeholder='contraseña' />
+                                    <input type="password" name="password" id="password" placeholder='contraseña' value={password} />
                                 </div>
 
                                 <div className='form-group'>
-                                    <a className='btn btn-success' href="/app/dashboard" required>INGRESAR</a>
+                                   { user==true && password==true  ? 
+                                    (<a className='btn btn-success' href="/app/dashboard" required>INGRESAR</a>)
+                                    :
+                                    (<a className='btn btn-success' href="/app/userCreate" required>INGRESAR</a>)
+                                   } 
+                                  
+                                    
                                 </div>
 
                                 <div className='form-group'>

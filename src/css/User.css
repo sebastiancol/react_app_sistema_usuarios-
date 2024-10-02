@@ -1,4 +1,4 @@
-  .container {
+  .containerb {
 
     display: flex;
     flex-direction: column;
@@ -6,9 +6,16 @@
     align-items: center;
     align-content:space-around;
 
-    /*padding: 20px;*/
-
     .item {
+      order: 5;
+    }
+
+    .itemb {
+      display:grid;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      align-content: space-around;
       order: 5;
     }
   
@@ -30,6 +37,14 @@
         max-width: 100%;
       }
     }
+  }
+
+  .tableuser{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content:space-between;
   }
 
   .form-container {
