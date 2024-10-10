@@ -10,10 +10,11 @@ export const TICKETGET = () => {
     useEffect(()=>{
         const apiFetch = async ()=>{
             try {
-                const response = await fetch('http://127.0.0.1:8000/api/v1/tickets');
+                const response = await fetch('http://localhost:8000/api/v1/ticketget');
                 const data = await response.json();
-                //console.log(data);
-                setTicket([...data])
+                //console.log(typeof(data));
+                const data2=Object.entries(data)
+                setTicket([...data2])
             } catch (error) {
                 console.log(error);
             }
