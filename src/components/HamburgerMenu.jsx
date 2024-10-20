@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import '../components/HamburgerMenu.css'; 
+import '../css/HamburgerMenu.css'; 
 
-export const HamburgerMenu = () => {
+export function HamburgerMenu ()  {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -15,12 +15,24 @@ export const HamburgerMenu = () => {
         <div className={`line ${isOpen ? 'active' : ''}`}></div>
         <div className={`line ${isOpen ? 'active' : ''}`}></div>
       </div>
-      <ul className={`menu ${isOpen ? 'open' : ''}`}>
-        <li className="menu-item"><a href="#home">LOGIN</a></li>
-        <li className="menu-item"><a href="#about">USUARIOS</a></li>
-        <li className="menu-item"><a href="#services">TICKETS</a></li>
-        <li className="menu-item"><a href="#contact">HISTORIAL</a></li>
-      </ul>
+      
+      
     </nav>
   );
 };
+
+/*
+  <ul className={`menu ${isOpen ? 'open' : ''}`}>
+    <li className="menu-item"><a href="#home">LOGIN</a></li>
+    <li className="menu-item"><a href="#about">USUARIOS</a></li>
+    <li className="menu-item"><a href="#services">TICKETS</a></li>
+    <li className="menu-item"><a href="#contact">HISTORIAL</a></li>
+  </ul>
+
+  <ul className={`menu  ${isOpen ? 'open' : ''}`}>
+    <li className="sidebar-item"><a href="/app/dashboard">Home</a></li>
+    <li className="sidebar-item"><a href="/app/dashboard/useredit/{id}">Perfil</a></li>
+    <li className="sidebar-item"><a href="/app/dashboard/ticketget">Historial</a></li>
+    <li className="sidebar-item"><a href="/app/dashboard/ticketcreate">Tickets</a></li>
+  </ul>
+*/

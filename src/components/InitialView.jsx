@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import {} from 'bootstrap'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export const Main = () =>{
 
@@ -8,6 +8,7 @@ export const Main = () =>{
 
         const [islogin,setLogin] = useState(false);
         const [create, setCreate] = useState(false);
+        
 
         if(!islogin){
 
@@ -19,6 +20,28 @@ export const Main = () =>{
     })
 
     login()
+
+    const [user,setUser] = useState([]);
+   
+    useEffect(()=>{
+        const apiFetch = async ()=>{
+            try {
+                const response = await fetch('http://127.0.0.1:8000/api/v1/users');
+
+                if(!response.ok){
+                    throw new Error(`Error! status:${response.status}`)
+                }
+
+                const result = response.json();
+               
+                return setUser([...result])
+            } catch (error) {
+                console.log(error);
+            }
+        } 
+        apiFetch();
+    },[])
+
    
     return(
         <div className="container">

@@ -1,4 +1,3 @@
-
 import { useState,useEffect } from 'react';
 import '../../css/Ticket.css';
 import {} from 'bootstrap';
@@ -6,21 +5,27 @@ import {} from 'bootstrap';
 export const TICKETGET = () => {
 
     const [ticket,setTicket] = useState([]);
-
+   
     useEffect(()=>{
         const apiFetch = async ()=>{
             try {
-                const response = await fetch('http://localhost:8000/api/v1/ticketget');
-                const data = await response.json();
-                //console.log(typeof(data));
-                const data2=Object.entries(data)
-                setTicket([...data2])
+                const response = await fetch('http://127.0.0.1:8000/api/v1/tickets');
+
+                if(!response.ok){
+                    throw new Error(`Error! status:${response.status}`)
+                }
+
+                const result = response.json();
+               
+                return setTicket([...result])
             } catch (error) {
                 console.log(error);
             }
         } 
         apiFetch();
     },[])
+
+  
 
     return (
         <div className="containera">

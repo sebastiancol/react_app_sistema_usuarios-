@@ -1,12 +1,13 @@
 import { useEffect,useState } from 'react';
 import '../css/DashBoard.css'; 
+import  {HamburgerMenu}  from '../components/HamburgerMenu';
 
-export function DashBoard ()   {
+export const DashBoard = ()=>   {
   const [url,setUrl] = useState([]);
   useEffect(()=>{
     const apiFetch = async ()=>{
         try {
-          const response = await fetch('http://localhost:5173/app/dashboard/');
+          const response = await fetch('http://localhost:5173/app/dashboard');
           const data = await response.json();
           //console.log(data);
           setUrl([...data])
@@ -19,8 +20,11 @@ export function DashBoard ()   {
 
   return (
     <div className="dashboard-container">
+      
+        <HamburgerMenu/>
       <aside className="sidebar">
         <h2 className="sidebar-title">Dashboard</h2>
+      
         <ul className="sidebar-menu">
           <li className="sidebar-item"><a href="/app/dashboard">Home</a></li>
           <li className="sidebar-item"><a href="/app/dashboard/useredit/{id}">Perfil</a></li>
@@ -28,6 +32,7 @@ export function DashBoard ()   {
           <li className="sidebar-item"><a href="/app/dashboard/ticketcreate">Tickets</a></li>
         </ul>
       </aside>
+      
       <main className="main-content">
         <header className="header">
           <h1 className="header-title">Bienvenido (usuario)</h1>
@@ -67,12 +72,13 @@ export function DashBoard ()   {
                         
                     />
                 </div>
-
+               
                 <button type="submit" className="btn btn-primary">Create Ticket</button>
             </form>
         </section>
       </main>
     </div>
+    
   );
 };
 
