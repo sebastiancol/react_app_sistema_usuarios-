@@ -2,9 +2,9 @@ import { useState,useEffect } from 'react';
 import '../../css/Ticket.css';
 import {} from 'bootstrap';
 
-export const TICKETGET = () => {
+export const TicketGet = () => {
 
-    const [ticket,setTicket] = useState([]);
+    const [tickets,setTicket] = useState([]);
    
     useEffect(()=>{
         const apiFetch = async ()=>{
@@ -14,10 +14,10 @@ export const TICKETGET = () => {
                 if(!response.ok){
                     throw new Error(`Error! status:${response.status}`)
                 }
-
-                const result = response.json();
                
-                return setTicket([...result])
+                const result = await response.json();
+                       
+		        setTicket([...result])
             } catch (error) {
                 console.log(error);
             }
@@ -53,14 +53,15 @@ export const TICKETGET = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {ticket.map((tickets)=>{
-                            <tr key={tickets.id}>
-                                <td>{tickets.title}</td>
-                                <td>{tickets.description}</td>
-                                <td>{tickets.user_id}</td>
-                                <td>{tickets.date_final}</td>
-                                <td>{tickets.created_at}</td>
-                                <td>{tickets.updated_at}</td>
+                        {tickets.map((ticket,element)=>(
+                            
+                            <tr key={element}>
+                                <td>{element.titulo}</td>
+                                <td>{ticket.descripcion}</td>
+                                <td>{ticket.user_id}</td>
+                                <td>{ticket.date_final}</td>
+                                <td>{ticket.created_at}</td>
+                                <td>{ticket.updated_at}</td>
                                 <td>
                                     <button type="button" className="btn btn-primary btn-">
                                         <a className="" href="{{ route('Ticket_edit', $item->id) }}">EDITAR<i className="fa fa-pencil-square" aria-hidden="true"></i></a>
@@ -90,10 +91,11 @@ export const TICKETGET = () => {
                                     </div>
                                 </td>
                             </tr>
-                        })}
+                        ))}
                     </tbody>
                 </table>
             </div>
         </div>
     );
 }
+

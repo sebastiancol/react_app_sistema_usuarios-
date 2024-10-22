@@ -5,7 +5,7 @@ import './css/App.css'
 import {Products} from './components/Products'
 import { Table } from './components/Tables';
 import { Main } from './components/InitialView';
-import { TICKETGET } from './components/Ticket/Ticketget';
+import { TicketGet } from './components/Ticket/Ticketget';
 import { TICKETCREATE} from './components/Ticket/Ticketcreate';
 import { USERGET } from './components/User/Userget';
 import { USERCREATE } from './components/User/Usercreate';
@@ -21,7 +21,7 @@ export const App = () => {
         <Route path='/app/products' element={<Products/>}></Route>
         <Route path='/app/products/?'></Route>
         <Route path='/app/categories/'></Route>
-        <Route path='/app/dashboard/ticketget' element={<TICKETGET/>}></Route>
+        <Route path='/app/dashboard/ticketget' element={<TicketGet/>}></Route>
         <Route path='/app/dashboard/ticketcreate' element={<TICKETCREATE/>}></Route>
         <Route path='/app/api/' element={<Table/>}></Route>
         <Route path='/app/dashboard/' element={<DashBoard/> }></Route>

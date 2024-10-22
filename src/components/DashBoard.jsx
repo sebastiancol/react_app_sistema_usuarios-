@@ -21,7 +21,7 @@ export const DashBoard = ()=>   {
   return (
     <div className="dashboard-container">
       
-        <HamburgerMenu/>
+      <HamburgerMenu/>
       <aside className="sidebar">
         <h2 className="sidebar-title">Dashboard</h2>
       

@@ -23,7 +23,7 @@ export const TICKETCREATE = () =>{
             <h1>Ticket</h1>
             
             <form onSubmit={handleSubmit} className="">
-                <div className="mb-3">
+                <div className="item">
                     <label htmlFor="title" className="form-label">Title</label>
                     <input
                         type="text"
@@ -53,6 +53,12 @@ export const TICKETCREATE = () =>{
                         value={date_final}
                         onChange={(e) => setDateFinal(e.target.value)}
                     />
+                </div>
+
+               < div className="">
+                    <label htmlFor="description" className="form-label">Creado por</label>
+                    <select
+                    > <option value="">escoja persona</option> </select>
                 </div>
 
                 <button type="submit" className="btn btn-primary">Create Ticket</button>
