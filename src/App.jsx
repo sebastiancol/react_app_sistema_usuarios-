@@ -23,6 +23,7 @@ export const App = () => {
         <Route path='/app/categories/'></Route>
         <Route path='/app/dashboard/ticketget' element={<TicketGet/>}></Route>
         <Route path='/app/dashboard/ticketcreate' element={<TICKETCREATE/>}></Route>
+        <Route path='/app/dashboard/ticketdelete' ></Route>
         <Route path='/app/api/' element={<Table/>}></Route>
         <Route path='/app/dashboard/' element={<DashBoard/> }></Route>
         <Route path='/app/dashboard/userget' element={<USERGET/>}></Route>

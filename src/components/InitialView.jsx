@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 
 export const Main = () =>{
 
-    const login = (()=>{
+    const login = ()=>{
 
         const [islogin,setLogin] = useState(false);
         const [create, setCreate] = useState(false);
@@ -17,11 +17,12 @@ export const Main = () =>{
             setCreate(create)
         }
 
-    })
+    }
 
     login()
 
     const [user,setUser] = useState([]);
+    const [password,setPassword] = useState([]);
    
     useEffect(()=>{
         const apiFetch = async ()=>{
@@ -34,7 +35,8 @@ export const Main = () =>{
 
                 const result = response.json();
                
-                return setUser([...result])
+                setUser([...result])
+                setPassword([...password])
             } catch (error) {
                 console.log(error);
             }
@@ -75,8 +77,8 @@ export const Main = () =>{
                                 </div>
 
                                 <div className='form-group'>
-                                    <Link to="/app/usercreate" className="btn btn-primary">CREAR CUENTA</Link>
-                                    <Link to="/app/loginrestore" className="btn btn-danger">RESTAURA CONTRASEÑA</Link>
+                                    <Link to="/app/dashboard/usercreate" className="btn btn-primary">CREAR CUENTA</Link>
+                                    <Link to="/app/dashboard/loginrestore" className="btn btn-danger">RESTAURA CONTRASEÑA</Link>
                                 </div>
                             </form>
                         </div>

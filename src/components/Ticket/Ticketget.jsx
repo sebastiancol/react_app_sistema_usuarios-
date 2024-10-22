@@ -56,7 +56,7 @@ export const TicketGet = () => {
                         {tickets.map((ticket,element)=>(
                             
                             <tr key={element}>
-                                <td>{element.titulo}</td>
+                                <td>{ticket.titulo}</td>
                                 <td>{ticket.descripcion}</td>
                                 <td>{ticket.user_id}</td>
                                 <td>{ticket.date_final}</td>
