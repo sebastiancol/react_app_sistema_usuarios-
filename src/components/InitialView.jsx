@@ -1,14 +1,14 @@
 import {Link} from 'react-router-dom'
 import {} from 'bootstrap'
-//import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 export const Main = () =>{
 
-   /* const login = ()=>{
 
+    /*const login = () =>{
+        
         const [islogin,setLogin] = useState(false);
         const [create, setCreate] = useState(false);
-        
 
         if(!islogin){
 
@@ -16,14 +16,12 @@ export const Main = () =>{
         }else{
             setCreate(create)
         }
-
     }
 
-    login()
+    login()*/
 
     const [user,setUser] = useState([]);
     const [password,setPassword] = useState([]);
-
 
    
     useEffect(()=>{
@@ -44,7 +42,7 @@ export const Main = () =>{
             }
         } 
         apiFetch();
-    },[])*/
+    },[])
 
    
     return(
@@ -69,9 +67,9 @@ export const Main = () =>{
                                 </div>
                                 <div className='form-group'>
                                    { user==true && password==true  ? 
-                                    (<a className='btn btn-success' href="/app/dashboard" required>INGRESAR</a>)
+                                    (<a className='btn btn-success' href="/app" required>INGRESAR</a>)
                                     :
-                                    (<a className='btn btn-success' href="/app/userCreate" required>INGRESAR</a>)
+                                    (<a className='btn btn-success' href="/app/dashboard" required>INGRESAR</a>)
                                    } 
                                   
                                     
