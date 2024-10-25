@@ -41,40 +41,10 @@ export const DashBoard = ()=>   {
             { url.map((urls)=>{
 
               urls ? url.flat("/tickget"):url.flat("/ticketcreate")
+              console.log(urls);
               })
             }
-             <form  className="">
-                <div className="mb-3">
-                    <label htmlFor="title" className="form-label">Title</label>
-                    <input
-                        type="text"
-                        id="title"
-                        className="form-control"
-                       
-                    />
-                </div>
-
-                <div className="">
-                    <label htmlFor="description" className="form-label">Description</label>
-                    <textarea
-                        id="description"
-                        className="form-control"
-                        
-                    ></textarea>
-                </div>
-
-                <div className=''>
-                    <label htmlFor="date_final" className="form-label">Fecha Final</label>
-                    <input
-                        type="date"
-                        id="title"
-                        className="form-control"
-                        
-                    />
-                </div>
-               
-                <button type="submit" className="btn btn-primary">Create Ticket</button>
-            </form>
+            
         </section>
       </main>
     </div>
