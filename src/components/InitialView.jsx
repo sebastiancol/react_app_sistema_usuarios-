@@ -1,10 +1,10 @@
 import {Link} from 'react-router-dom'
 import {} from 'bootstrap'
-import { useState, useEffect } from 'react'
+//import { useState, useEffect } from 'react'
 
 export const Main = () =>{
 
-    const login = ()=>{
+   /* const login = ()=>{
 
         const [islogin,setLogin] = useState(false);
         const [create, setCreate] = useState(false);
@@ -23,6 +23,8 @@ export const Main = () =>{
 
     const [user,setUser] = useState([]);
     const [password,setPassword] = useState([]);
+
+
    
     useEffect(()=>{
         const apiFetch = async ()=>{
@@ -42,7 +44,7 @@ export const Main = () =>{
             }
         } 
         apiFetch();
-    },[])
+    },[])*/
 
    
     return(
@@ -56,16 +58,15 @@ export const Main = () =>{
                             <form action="" className='form-container'>
                                 <div className='form-group'>
                                     <label htmlFor="document" className="form-label">Usuario</label>
-                                    <input type="text" name="user" id="user" placeholder='usuario' value={user} />
+                                    <input type="text" name="user" id="user" placeholder='usuario' value={{}} />
                                 </div>
                                 
                                 <br/>     
 
                                 <div className='form-group'>
                                     <label htmlFor="password" className="form-label">Password</label>
-                                    <input type="password" name="password" id="password" placeholder='contraseña' value={password} />
+                                    <input type="password" name="password" id="password" placeholder='contraseña' value={{}} />
                                 </div>
-
                                 <div className='form-group'>
                                    { user==true && password==true  ? 
                                     (<a className='btn btn-success' href="/app/dashboard" required>INGRESAR</a>)
@@ -75,6 +76,7 @@ export const Main = () =>{
                                   
                                     
                                 </div>
+                              
 
                                 <div className='form-group'>
                                     <Link to="/app/dashboard/usercreate" className="btn btn-primary">CREAR CUENTA</Link>

@@ -28,7 +28,7 @@ export const TicketGet = () => {
   
 
     return (
-        <div className="containera">
+        <div className="container">
 
             <div className="item">
                 <h2>LISTADO TICKETS</h2>
@@ -58,10 +58,10 @@ export const TicketGet = () => {
                             <tr key={element}>
                                 <td>{ticket.titulo}</td>
                                 <td>{ticket.descripcion}</td>
-                                <td>{ticket.user_id}</td>
-                                <td>{ticket.date_final}</td>
-                                <td>{ticket.created_at}</td>
-                                <td>{ticket.updated_at}</td>
+                                <td>{ticket.creado_por}</td>
+                                <td>{ticket.fecha_final}</td>
+                                <td>{ticket.fecha_creacion}</td>
+                                <td>{ticket.fecha_actualizacion}</td>
                                 <td>
                                     <button type="button" className="btn btn-primary btn-">
                                         <a className="" href="{{ route('Ticket_edit', $item->id) }}">EDITAR<i className="fa fa-pencil-square" aria-hidden="true"></i></a>

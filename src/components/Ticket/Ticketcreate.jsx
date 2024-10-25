@@ -19,7 +19,7 @@ export const TICKETCREATE = () =>{
 
     return (
 
-        <div className='containerb'>
+        <div className='container'>
             <h1>Ticket</h1>
             
             <form onSubmit={handleSubmit} className="">
